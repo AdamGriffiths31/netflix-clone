@@ -1,0 +1,35 @@
+.footer{
+    background-color: #111;
+    color: gray;
+    max-width: 980px;
+    margin: 20px auto 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.footer_links{
+    display: flex;
+    flex-wrap: wrap;
+}
+@media(min-width: 800px) {
+    .footer_links{
+    -webkit-flex-basis: 25%;
+    -ms-flex-preferred-size: 25%;
+    flex-basis: 25%;
+    }
+}
+
+.footer_link{
+    flex: 1 0 21%;
+    list-style-type: none;
+
+}
+
+.footer_socials{
+    margin-right: 15px;
+    display: flex;
+}
+.footer_social{
+    padding-right: 50px;
+    display: flex;
+
+}

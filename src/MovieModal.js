@@ -18,10 +18,10 @@ const MovieDetails = ({
           Release date: {release_date || first_air_date} 
         </p>
         <p className='modal__overview'>{truncate(overview,250)}</p>
-        <button className='banner_button'>
+        <button className='modal_button'>
           Play
         </button>
-        <button className='banner_button'>
+        <button className='modal_button MyList'>
           My List
         </button>
       </div>

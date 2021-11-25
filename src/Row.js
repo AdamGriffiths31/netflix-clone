@@ -11,18 +11,18 @@ SwiperCore.use([Navigation, Pagination, Scrollbar, A11y])
 
 const baseURL="https://image.tmdb.org/t/p/original"
 
-function Row({title, fetchUrl,isLargeRow,selectMovieHandler}) {
+const Row = ({data,title, fetchUrl,isLargeRow,selectMovieHandler}) =>{
   const [windowDimensions] = useViewport()
   const { width } = windowDimensions
-    const [movies,setMovies] = useState ([]);
-    useEffect(()=>{
-        async function fetchData(){
-            const request = await axios.get(fetchUrl);
-            setMovies(request.data.results);
-            return request;
-            }
-        fetchData();
-    },[fetchUrl])
+    // const [movies,setMovies] = useState ([]);
+    // useEffect(()=>{
+    //     async function fetchData(){
+    //         const request = await axios.get(fetchUrl);
+    //         setMovies(request.data.results);
+    //         return request;
+    //         }
+    //     fetchData();
+    // },[fetchUrl])
 
     return ( 
       <>
@@ -62,7 +62,7 @@ function Row({title, fetchUrl,isLargeRow,selectMovieHandler}) {
         pagination={{ clickable: true }}
       >      
 
-      {movies.map(movie =>{
+      {data && data.map(movie =>{
             if (movie.poster_path && movie.backdrop_path !== null) {
               return (
             <SwiperSlide

@@ -3,7 +3,6 @@ import './Modal.scss'
 import Backdrop from './Backdrop'
 
 const Modal = ({ show, modalClosed, children, backgroundImage }) => {
-    console.log(show)
   const backgroundStyle = {
     backgroundSize: 'cover',
     backgroundImage: `url(https://image.tmdb.org/t/p/original/${backgroundImage})`,
